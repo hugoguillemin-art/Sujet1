@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- empêcher le référencement -->
+<meta name="robots" content="noindex, nofollow, noarchive" />
+
+<title>P5js intro</title>
+
+<!-- favicon -->
+<link rel="shortcut icon" type="image/png" href="img/Logo.png"/>
+
+<!-- pour les mobiles -->
+<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0" />
+
+<!-- style -->
+ <link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body class="scroll-container">
+	<header>
+    <h1>Projet P5</h1>
+    <p class="premier">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed egestas risus, nec efficitur odio. Morbi nec auctor sem. Pellentesque imperdiet euismod risus, quis consequat libero ullamcorper lacinia. In tincidunt nisi ut tempor porttitor. Morbi vehicula vitae turpis at facilisis. Integer at tempor purus. Nullam consequat nisi enim, quis sodales metus hendrerit nec. Donec ullamcorper sapien quis lobortis tempor. Nam vestibulum laoreet magna, id pellentesque justo volutpat ac. Phasellus arcu nisl, aliquam sed lectus vel, mattis dapibus arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum eu nisl eget eros porta tempus.
+    </p>
+     <br>
+       <h2>sources :</h2>
+       <p class="deuxieme">
+        source 1 : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+        source2 : xxxxxxxxxxxxxxxxxxxx
+       </p>
+  </header>
+  <figure>
+       <video class="hoverPlay" autoplay="true"  muted="true" src="img/Rendu1.mp4" loop="true"></video>
+       <figcaption class="legende">Rendu 1 : Glitch 1.4</figcaption>
+  </figure>
+   
+  <figure>
+       <video autoplay="true"  muted="true" src="img/Rendu2.mp4" loop="true"></video>
+       <figcaption class="legende">Rendu 2 : ZoomIn</figcaption>
+  </figure>
+  
+   <figure>
+       <video class="fullPage hoverPlay"  autoplay="true" muted="true" src="img/Rendu3.mp4" loop="true"></video>
+       <figcaption class="legende">Rendu 3 : Draaaagon</figcaption>
+  </figure>
+
+     <figure>
+       <video autoplay="true"  muted="true" src="img/Rendu4.mp4" loop="true"></video>
+       <figcaption class="legende">Rendu 4 : C'est carré</figcaption>
+  </figure>
+
+     <figure>
+       <video class="fullPage"  autoplay="true" muted="true" src="img/Rendu5.mp4" loop="true"></video>
+       <figcaption class="legende">Rendu 5 : Glitch 1.4</figcaption>
+  </figure>
+   
+
+   
+</html>
+</body>
+
+
+
+<!-- ne pas toucher  -->
+<script>
+const container = document.querySelector('html');
+document.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    container.scrollLeft += e.deltaY;
+}, { passive: false });
+
+const video = document.querySelectorAll('.hoverPlay');
+video.forEach((v) => {
+  v.addEventListener('mouseenter', () => {
+  v.play();
+});
+v.addEventListener('mouseleave', () => {
+  v.pause();
+  v.currentTime = 0; // revient au début
+});
+})
+
+</script>

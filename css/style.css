@@ -1,0 +1,128 @@
+:root {
+	/* marges : */
+  --margeDeLaPage: 100px;
+  --espaceEntreLesBlocs : 50px;
+
+  /* couleurs */
+  --couleurTitre :rgb(225, 255, 73);
+  --couleurDuTexte : rgb(225, 255, 73);
+  --couleurFond : rgb(5, 5, 8);
+
+  /* dimension des blocs */
+  --largeurPremierBloc : 500px;
+  --largeurAside : 250px;
+
+
+  /* taille des textes :  */
+  --fontsizeGlobal : 16px;
+  --fontSizeH1 : 40px;
+  --fontSizeH2 : 40px;
+}
+
+@font-face{
+  font-family: "Century_Gothic";
+  src: url(../Typo/gothic.woff) format("woff");
+}
+
+html{
+
+ font-family: "Century_Gothic";
+ font-size: var(--fontsizeGlobal);
+ height: 100vh;
+ overflow-y: hidden;
+ display: flex;
+ background-color: var(--couleurFond);
+ color: var(--couleurDuTexte);
+ 
+}
+
+*{
+	box-sizing: border-box;
+}
+
+header{
+	width: var(--largeurPremierBloc);
+}
+
+aside{
+	width: var(--largeurAside)
+}
+
+h1{
+	
+	/* font-family: "Century_Gothic"; */
+	color: var(--couleurTitre);
+	font-size: var(--fontSizeH1);
+	margin-bottom: 10px;
+}
+
+h2{
+
+	/* font-family: "Century_Gothic"; */
+	color: var(--couleurTitre);
+	font-size: var(--fontSizeH2);
+	margin-bottom: 10px;
+}
+
+body{
+	display: flex;
+	height: 100%;
+	padding: var(--margeDeLaPage);
+	position: relative;
+}
+
+body>*{
+	margin-right: var(--espaceEntreLesBlocs);
+}
+
+.galerie_horizontale{
+	  width: auto;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.galerie_horizontale>*{
+	  width: auto;
+  height: 30%;
+  position: relative;
+}
+
+.fullPage{
+	height: 100vh;
+	position: relative;
+	top: calc( var(--margeDeLaPage)* -1 );
+}
+
+figure,video{
+	height: 100%;
+	width: auto;
+}
+
+video{
+	padding: 15px;
+    background-color: rgb(118, 60, 172);
+}
+
+
+p{
+	color: rgb(118, 60, 172);
+}
+
+.legende{
+	font-style: italic;
+	font-size: 12px;
+	margin-top: 5px;	
+}
+/*.premier{
+	background-color: rgb(71, 23, 116);
+}*/
+
+
+
+
+
+/* canvas{display: none;} */
+/* raccourcis:"CTRL + / "*/
